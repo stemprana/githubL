@@ -5,12 +5,28 @@
 
 	git config --global --list  [in case you want to see global configurations]
 
-> Create a repository from the command line in case we already have files in local dir
+> Create a repository online
+	[In theory from one of the tutorials this is not necessary but it gives me an error if I do not do it]
+
+
+> From the command line got to local dir where we have the files. Folder does not need to have the same name as repository
 
 	[Go to local dir]
 	
 	git init [creates '.git' hidden folder with all the data required to track project]
 	git init . [if you want to initialize with all files in the directory]
+
+
+> Configure server ('remote' in git terminology) to contact. This has to be done a single time
+	
+	git remote add origin 'https://github.com/USER/REPOSITORYNAME.git' [ adds server named 'origin' with the given URL]
+
+	[If you screw up setting URLs following commands are useful]
+	git remote -v [lists defined severs]
+	git remote set-url origin URL [Changes the URL of existing server named 'origin']
+	
+> Add files to staging area and commit changes
+	
 
 	git add "FILENAME" [Adds files individually to the staging area]
 	git add . 
@@ -18,11 +34,13 @@
 	
 	git commit -m "MESSAGE" [Commit changes]
 
-	git push [push changes]
+> Push
+
+	git push --set-upstream origin master [The first time we push we have to tell which server to push to, the '--set-upstream' flag lets us do it only one time]	
 
 	
 
-	[ In case we get 'fatal: No configured push destination' it is because it does not know which server ('remote' in git terminology) to contact, so we have to set it for the first time manually as described below]
+
 
 
 	
