@@ -1,0 +1,32 @@
+> Introduce yourself to github
+
+	git config --global user.name "NAME"
+	git config --global user.email "EMAIL"
+
+	git config --global --list  [in case you want to see global configurations]
+
+> Create a repository from the command line in case we already have files in local dir
+
+	[Go to local dir]
+	
+	git init [creates '.git' hidden folder with all the data required to track project]
+	git init . [if you want to initialize with all files in the directory]
+
+	git add "FILENAME" [Adds files individually to the staging area]
+	git add . 
+        git add -all [Add all files to the staging area]
+	
+	git commit -m "MESSAGE" [Commit changes]
+
+	git push [push changes]
+
+	
+
+	[ In case we get 'fatal: No configured push destination' it is because it does not know which server ('remote' in git terminology) to contact, so we have to set it for the first time manually as described below]
+
+
+	
+	
+	
+	
+	
